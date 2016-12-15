@@ -1,0 +1,137 @@
+.container_1rineb {
+    overflow: hidden;
+}
+.secondaryChildContainer_ol8bke-o_O-secondaryChildrenLeft_1u9lih1 {
+    float: left !important;
+    width: -moz-calc(50% - 2.5px) !important;
+    width: -webkit-calc(50% - 2.5px) !important;
+    width: calc(50% - 2.5px) !important;
+    margin-top: 5px !important;
+    margin-right: 2.5px !important;
+}
+.secondaryChildContainer_ol8bke-o_O-secondaryChildrenRight_1c0vtij {
+    float: left !important;
+    width: -moz-calc(50% - 2.5px) !important;
+    width: -webkit-calc(50% - 2.5px) !important;
+    width: calc(50% - 2.5px) !important;
+    margin-top: 5px !important;
+    margin-left: 2.5px !important;
+}
+.container_ro0g1e {
+    cursor: pointer !important;
+}
+.container_13hv8io {
+    position: relative !important;
+}
+.container_v5f37j {
+    position: relative !important;
+    width: 100% !important;
+    z-index: 0 !important;
+}
+.children_dsybz9 {
+    position: absolute !important;
+    top: 0px !important;
+    bottom: 0px !important;
+    left: 0px !important;
+    right: 0px !important;
+    height: 100% !important;
+    width: 100% !important;
+}
+.image_1kryhnd {
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    height: 100% !important;
+    width: 100% !important;
+    background-image: url(https://a0.muscache.com/airbnb/static/launch_platform/hub/keynote-15c44f5c62098bf300b946fc230d25bb.jpg);
+}
+
+@media (min-width: 744px) {
+    .playContainer_1ea3la2 {
+        padding: 20px !important;
+    }
+}
+.playContainer_1ea3la2 {
+    position: absolute !important;
+    bottom: 0px !important;
+    background: -moz-linear-gradient(transparent 0%, rgba(0, 0, 0, 0.65) 100%) !important;
+    background: -webkit-linear-gradient(transparent 0%, rgba(0, 0, 0, 0.65) 100%) !important;
+    background: linear-gradient(transparent 0%, rgba(0, 0, 0, 0.65) 100%) !important;
+    width: 100% !important;
+    text-shadow: 0 2px 1em #000000 !important;
+    padding: 10px !important;
+}
+.playButton_5r8yl5 {
+    background: transparent !important;
+    border: none !important;
+}
+input, button, select, textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+button, html input[type="button"], input[type="reset"], input[type="submit"] {
+    -webkit-appearance: button;
+    cursor: pointer;
+}
+button, select {
+    text-transform: none;
+}
+button, input {
+    line-height: normal;
+}
+button, input, select, textarea {
+    font-family: inherit;
+    font-size: 100%;
+    margin: 0;
+}
+.playIcon_fu8dy2 {
+    font-size: 30px !important;
+    opacity: 0.8 !important;
+}
+.icon {
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+}
+.text-contrast {
+    color: #fff;
+}
+.icon-video-play:before {
+    content: '\f202';
+}
+.icon:before {
+    line-height: 1;
+}
+.icon:before {
+    font-family: Airglyphs, sans-serif;
+}
+.playText_dv8zrv {
+    position: relative !important;
+    bottom: 4px !important;
+    left: 8px !important;
+}
+.text_1chds16-o_O-size_small_1vrq4z6-o_O-color_inverse_113vl3-o_O-inline_10f0ge3 {
+    font-weight: normal !important;
+    color: #ffffff !important;
+    font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif !important;
+    margin: 0px !important;
+    word-wrap: break-word !important;
+    font-size: 15px !important;
+    line-height: 18px !important;
+    letter-spacing: 0.2px !important;
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+    display: inline !important;
+}
+.show-sm {
+    display: none !important;
+}
+.hide {
+    display: none !important;
+}
+audio, canvas, video {
+    display: inline-block;
+}

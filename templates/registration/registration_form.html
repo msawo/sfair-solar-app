@@ -1,0 +1,19 @@
+{% extends 'contact.html' %}
+{% load staticfiles %}
+{% block title %}
+    Register | Sfair
+{% endblock title %}
+
+{% block content %}
+  <div id="container">
+      <form class="form-contact br" role="form" action="" method="post">
+    <h4 class="text-align-center form-title">Register</h4>
+    <p class="piu-space-down text-align-center">Already have a Sfair account? <a href="{% url 'auth_login' %}" class="bold">sign in</a></p>
+
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" class="btn btn-primary log-in-out-btn" name="" value="Submit">
+        <a href="{% url 'home' %}"><h6 class="text-align-center">Return back home</h6></a>
+      </form>
+  </div>
+  {% endblock %}

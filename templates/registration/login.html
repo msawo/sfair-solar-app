@@ -1,0 +1,41 @@
+{% extends 'contact.html' %}
+{% load staticfiles %}
+{% block title %}
+    Login | Sfair
+{% endblock title %}
+
+{% block content %}
+<div class="main-content position-relative" id="main-con tent" role="main">
+    <div id="top"></div>
+    <div>
+                    <div id="container">
+                		<div class="form-contact br">
+                	  	<div class="column no-shrink align-center-at-medium"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+                  <polyline fill="none" stroke="#2E3B4E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="15,10.9 13,13 12,11.9"></polyline>
+                  <polyline fill="none" stroke="#2E3B4E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="15,15.9 13,18 12,16.9"></polyline>
+                  <path fill="none" stroke="#2E3B4E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M20,3h7c0.7,0,1,0.4,1,1v26c0,0.6-0.3,1-1,1H5c-0.7,0-1-0.4-1-1V4c0-0.6,0.3-1,1-1h7"></path>
+                  <line fill="none" stroke="#2E3B4E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="18" y1="21.9" x2="20" y2="21.9"></line>
+                  <line fill="none" stroke="#2E3B4E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="18" y1="16.9" x2="20" y2="16.9"></line>
+                  <line fill="none" stroke="#2E3B4E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="18.1" y1="12" x2="20.1" y2="12"></line>
+                  <line fill="none" stroke="#2E3B4E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="20" y1="27" x2="24" y2="27"></line>
+                  <polygon fill="none" stroke="#2E3B4E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="24,27 8,27 8,7 24,7"></polygon>
+                  <polygon fill="none" stroke="#2E3B4E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="20,7 12,7 12,1 20,1"></polygon>
+                </svg>
+                </div>
+                      <h6 class="text-align-center">Login</h6>
+                	  <p class="piu-space-down text-align-center">Don't have a Sfair Account? Please <a href="{% url 'registration_register' %}" class="bold">register</a> now.</p>
+
+                      <form class="" role="form" action="" method="post">
+                          {% csrf_token %}
+                          {{ form.as_p }}
+                          <input class="btn btn-primary log-in-out-btn" type="submit"  name="" value="Log in">
+                      </form>
+                      <p class="text-align-center"><a href="{% url 'password_reset' %}">Forgot your password?</a></p>
+                  </div>
+                	</div>
+
+                </div>
+            </div>
+</div>
+</div>
+{% endblock content %}
