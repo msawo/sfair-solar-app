@@ -7,7 +7,7 @@ produced and consumed by the solar panels.
 
 ![Alt text](https://static1.squarespace.com/static/584bdd37e58c620f9601f270/t/586e4340197aea98191bfa49/1483621185668/solar_app-devices-02.gif "Solar-app")
 
-![Alt text](https://static1.squarespace.com/static/56e63a74d51cd48392e1db1b/t/58763cac44024353e5171147/1484143798312/solar_app-device-01.gif?raw=true "Responsive")
+![Alt text](relative/solar_app-device-01.gif?raw=true "Responsive")
 
 
 
