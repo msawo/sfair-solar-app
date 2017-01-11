@@ -7,13 +7,6 @@ produced and consumed by the solar panels.
 
 ![Alt text](https://static1.squarespace.com/static/584bdd37e58c620f9601f270/t/586e4340197aea98191bfa49/1483621185668/solar_app-devices-02.gif "Solar-app")
 
-<img src="sfair-solar-app/solar_app-device-01.gif"/>
-![Alt text](relative/sfair-solar-app/solar_app-device-01.gif "Responsive")
-
-
-
-
-
 It all started when I was in college; I thought of the four main areas Africa needs to improve on in order to 
 catch up to the developed world and the digital revolution in particular. And those being: Education, sustainable 
 energy (particularly solar - I mean we have a giant fusion reactor over our heads 365 days a year that could power
