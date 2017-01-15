@@ -1,4 +1,5 @@
 from django.template.defaultfilters import slugify
+from django.urls import reverse
 import datetime
 from django.shortcuts import render, redirect
 from collection.forms import ProfileForm
