@@ -12,6 +12,7 @@ class ProfileForm(ModelForm):
         fields = ('name', 'address',)
 
 
+# config this class later
 class InstallationForm(forms.ModelForm):
     class Meta:
         model = models.Installation
@@ -22,4 +23,4 @@ class InstallationForm(forms.ModelForm):
             'description',
         ]
 
-# config this class later
+
