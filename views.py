@@ -33,7 +33,7 @@ def edit_profile(request, slug):
     if profile.user != request.user:
         raise Http404
 
-    # set the form we're using...
+    # set the form we're using..
     form_class = ProfileForm
 
     # if we're coming to this view from a submitted form,
