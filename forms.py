@@ -12,6 +12,7 @@ class ProfileForm(ModelForm):
         fields = ('name', 'address',)
 
 
+        
 # config this class later
 class InstallationForm(forms.ModelForm):
     class Meta:
