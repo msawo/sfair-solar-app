@@ -23,55 +23,47 @@
     <nav class="top">
         <div class="content">
             <a href="{% url 'home' %}" class="logo" data-qa="logo" aria-label="Sfair homepage"></a>
-
-
-        			<ul>
-        			<li><a  href="{% url 'solarpanels' %}">Solar panels</a></li>
-        			<li><a  href="{% url 'powerwall' %}">Powerwall</a></li>
-                    {% if user.is_authenticated %}
-        			<li class= "mobile_btn download_sfair"><a  href="{% url 'auth_logout' %}" >Logout</a>
-                    </li> <!-- change the class--->
-                    {% else %}
-                    <li class= "mobile_btn download_sfair"><a  href="{% url 'auth_login' %}">Login</a>
-                    </li>
-                    {% endif %}
-                    <li>
-                        <a href="{% url 'pricing' %}" class="opt_nav_create ga_track_signup ">Pricing</a>
-                    </li>
-                    {% if user.is_authenticated %}
-                    <li class="sign_in hide_on_mobile">
-                        <a href="{% url 'auth_logout' %}" class="btn_sticky btn_filled opt_nav_signin" data-qa="sign_in">Sign out</a>
-                    </li>
-                    {% else %}
-                    <li><a  href="{% url 'registration_register' %}" class="opt_nav_find" data-qa="register">Register</a>
-                    </li>
-                    <li class="sign_in hide_on_mobile">
-                        <a href="{% url 'auth_login' %}" class="btn_sticky btn_filled opt_nav_signin" data-qa="sign_in">Sign in</a>
-                    </li>
-                    {% endif %}
-        				<li class="mobile_btn mobile_menu_btn">
-        				<a href="#" class="btn_sticky" >Menu</a>
-        			</li>
-        		</ul>
-        </div>
-	</nav>
-<nav class="top fixed" >
-
-
-	<a href="{% url 'home' %}" class="logo"></a>
-			<ul>
-			<li class= "mobile_btn download_slack"><a  href="{% url 'home' %} ">Download Sfair Solar</a>
-            </li>
-						<li class="mobile_btn mobile_menu_btn">
-				<a href="#" class="btn_sticky">Menu</a>
+		<ul>
+			<li><a  href="{% url 'solarpanels' %}">Solar panels</a></li>
+			<li><a  href="{% url 'powerwall' %}">Powerwall</a></li>
+                    	{% if user.is_authenticated %}
+			<li class= "mobile_btn download_sfair"><a  href="{% url 'auth_logout' %}" >Logout</a>
+                    	</li> 
+                    	{% else %}
+			<li class= "mobile_btn download_sfair"><a  href="{% url 'auth_login' %}">Login</a>
+			</li>
+			{% endif %}
+			<li>
+			<a href="{% url 'pricing' %}" class="opt_nav_create">Pricing</a>
+			</li>
+			{% if user.is_authenticated %}
+			<li class="sign_in hide_on_mobile">
+			<a href="{% url 'auth_logout' %}" class="btn_sticky btn_filled opt_nav_signin">Sign out</a>
+			</li>
+			{% else %}
+			<li><a  href="{% url 'registration_register' %}" class="opt_nav_find">Register</a>
+			</li>
+			<li class="sign_in hide_on_mobile">
+			<a href="{% url 'auth_login' %}" class="btn_sticky btn_filled opt_nav_signin">Sign in</a>
+			</li>
+			{% endif %}
+			<li class="mobile_btn mobile_menu_btn"><a href="#" class="btn_sticky" >Menu</a>
 			</li>
 		</ul>
-
-
+        </div>
+	</nav>
+	<nav class="top fixed" >
+		<a href="{% url 'home' %}" class="logo"></a>
+		<ul>
+			<li class= "mobile_btn download_sfair"><a  href="{% url 'home' %} ">Download Sfair Solar</a>
+			</li>
+			<li class="mobile_btn mobile_menu_btn"><a href="#" class="btn_sticky">Menu</a>
+			</li>
+		</ul>
 	</nav>
         {% block content %}
 
-        <script src="{% static 'css/js'%}"></script> <!--Add the js file name etc -->
+        <script src="{% static 'css/js'%}"></script> <!--Add the js file name etc-->
         {% endblock content %}
         <section>
             <footer class="site_footer">
