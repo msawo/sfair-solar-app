@@ -1,7 +1,9 @@
 {% extends 'contact.html' %}
 {% load staticfiles %}
+{% load humanize %}
+
 {% block title %}
-    Login | Sfair
+    Edit {{ profile.name }} | {{ block.super }}
 {% endblock title %}
 
 {% block content %}
@@ -22,15 +24,14 @@
                   <polygon fill="none" stroke="#2E3B4E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="20,7 12,7 12,1 20,1"></polygon>
                 </svg>
                 </div>
-                      <h6 class="text-align-center">Login</h6>
-                	  <p class="piu-space-down text-align-center">Don't have a Sfair Account? Please <a href="{% url 'registration_register' %}" class="bold">register</a> now.</p>
+                <h1 class="">Here's your current profile {{ profile.name|title }}:</h1>
+                <form role="form" class="" action="" method="post">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button class="btn btn-primary log-in-out-btn inverted text-align-center" type="submit">Update</button>
+                    <p class="text-align-center"><a href="{% url 'profile_detail' slug=profile.slug %}">Or <strong>cancel</strong></a></p>
+                </form>
 
-                      <form class="" role="form" action="" method="post">
-                          {% csrf_token %}
-                          {{ form.as_p }}
-                          <input class="btn btn-primary log-in-out-btn" type="submit"  name="" value="Log in">
-                      </form>
-                      <p class="text-align-center"><a href="{% url 'password_reset' %}">Forgot your password?</a></p>
                   </div>
                 	</div>
 

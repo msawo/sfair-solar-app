@@ -1,0 +1,197 @@
+{% extends 'myaccount.html' %}
+{% load staticfiles %}
+{% load humanize %}
+
+<body>
+    {% block edit %}
+    {% if user == profile.user %}
+    <h5 class="badge"><a href="{% url 'edit_profile' slug=profile.slug %}" class="medium-font"><strong>Edit</strong></a>
+        my profile
+    </a></h5>
+    {% endif %}
+    {% endblock %}
+    {% block content %}
+    <div id="signup_graphics_pane" class="fs_split_pane fs_split_pane_right" data-step="">
+        <div class="fs_split_flex_wrapper">
+            <div class="fs_split_header">
+                <div id="find_team">
+                    <a href="#" class="account_link">Make payment</a>
+                    <a href="{% url 'profile_detail' slug=profile.slug %}" class="account_link">My account</a>
+                    {% if user.is_authenticated %}
+                    <a href="{% url 'auth_logout' %}" id="find_team_link">Log out</a>
+                    {% else %}
+                    <a href="{% url 'auth_login' %}" id="find_team_link">Login</a>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="section_content gap-bottom">
+                <p class="inverted align-center gap-top-small">My solar <strong>energy production</strong> for week of Nov 30, 2016.</p>
+                <a href="/create" class="btn btn_large small_top_margin inverted gap-bottom" data-qa="create_team_bottom">This week</a>
+                <div class="grid-2-at-small grid-3-at-large grid-row-equal-heights">
+                                <div class="column indigo-theme">
+                                    <a class="tile full-bleed" href="#">
+                                        <div class="image pad-top-base theme-muted-bg"></div>
+                                        <div class="copy pad-line">
+                                            <h6 class="gap-none">Payments</h6>
+                                            <p class="gap-none">My payment history</p>
+                                            <p class="cta gap-none"><span class="link arrow">Learn More</span>
+                                            </p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="column indigo-theme">
+                                    <a class="tile full-bleed" href="#">
+                                        <div class="image pad-top-base theme-muted-bg"></div>
+                                        <div class="copy pad-line">
+                                            <h6 class="gap-none">Dashboard</h6>
+                                            <p class="gap-none">Make better energy decisions</p>
+                                            <p class="cta gap-none"><span class="link arrow">Learn More</span>
+                                            </p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="column purple-theme">
+                                    <a class="tile full-bleed" href="#">
+                                        <div class="image pad-top-base theme-muted-bg"></div>
+                                        <div class="copy pad-line">
+                                            <h6 class="gap-none">Savings</h6>
+                                            <p class="gap-none">How much I saved this month</p>
+                                            <p class="cta gap-none"><span class="link arrow">
+                                                Learn More</span>
+                                            </p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+            <div class="column">
+                    <div class="column">
+                        <h2 class="inverted align-center gap-top-small">Battery charge</h2>
+                    <div id="chart"></div>
+                    <p class="inverted align-center">
+                        Share some KWh on the grid, and lower your electric bill.
+                    </p>
+                    </div>
+
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="{% static 'js/c3.js' %}"></script>
+    <script>
+      var chart = c3.generate({
+        data: {
+          columns: [
+            [ 'charged', 91.4 ]
+          ],
+          type: 'gauge',
+          onmouseover: function (d, i) { console.log("onmouseover", d, i, this); },
+          onmouseout: function (d, i) { console.log("onmouseout", d, i, this); },
+          onclick: function (d, i) { console.log("onclick", d, i, this); },
+        },
+        gauge: {
+          label: {
+//            format: function(value, ratio) {
+//              return value;
+//            },
+//          show: false // to turn off the min/max labels.
+          },
+//          min: 0, // 0 is default, //can handle negative min e.g. vacuum / voltage / current flow / rate of change
+//          max: 100, // 100 is default
+//          units: ' %',
+//          width: 39 // for adjusting arc thickness
+        },
+        color: {
+          pattern: ['#FF0000', '#F6C600', '#60B044'], // the three color levels for the percentage values.
+          threshold: {
+//            unit: 'value', // percentage is default
+//            max: 200, // 100 is default
+            values: [30, 60, 90] // alternate first value is 'value'
+          }
+        }
+      });
+
+
+
+      var cycleDemo = function () {
+
+        setTimeout(function () {
+          d3.select('#chart .c3-chart-arcs-background')
+            .transition()
+            .style('fill', '#333');
+        }, 1000);
+
+
+        setTimeout(function () {
+          d3.select('#chart .c3-chart-arcs-background')
+            .transition()
+            .style('fill', '#e0e0e0');
+        }, 5000);
+
+        setTimeout(function () {
+            chart.load({
+              columns: [[ 'charged', 0 ]]
+            });
+        }, 6000);
+
+        setTimeout(function () {
+            chart.load({
+              columns: [[ 'charged', 50 ]]
+            });
+        }, 7000);
+
+        setTimeout(function () {
+            chart.load({
+              columns: [[ 'charged', 91.4 ]]
+            });
+        }, 8000);
+
+        setTimeout(function () {
+            chart.load({
+              columns: [[ 'charged', 0 ]]
+            });
+        }, 9000);
+
+        setTimeout(function () {
+            chart.load({
+              columns: [[ 'charged', 50 ]]
+            });
+        }, 10000);
+
+        setTimeout(function () {
+            chart.load({
+              columns: [[ 'charged', 91.4 ]]
+            });
+        }, 11000);
+
+        setTimeout(function () {
+            chart.load({
+              columns: [[ 'charged', 0 ]]
+            });
+        }, 12000);
+
+        setTimeout(function () {
+            chart.load({
+              columns: [[ 'charged', 50 ]]
+            });
+        }, 13000);
+
+        setTimeout(function () {
+            chart.load({
+              columns: [[ 'charged', 91.4 ]]
+            });
+        }, 14000);
+
+      }
+
+      cycleDemo();
+
+//      setInterval(cycleDemo, 30000);
+    </script>
+            </div>
+        </div>
+    </div>
+    {% endblock content %}
+</body>

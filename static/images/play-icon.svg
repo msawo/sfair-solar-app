@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg id="play-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50" height="50" viewBox="0 0 50 50" version="1.1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" svg="content/images/shared/play-icon.svg" class="play-icon white" ng-click="BodyCtrl.play('blood_collection')" role="button" tabindex="0">
-      <path d="M18.25 13.18L33.1 23.19 18.25 33.2 18.25 13.18 18.25 13.18Z" id="shape" transform="translate(2,2)"></path>
-      <circle id="circle" stroke-width="2" cx="25" cy="25" r="23.5"></circle>
-</svg>

@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block title %}
+    Logout | {{ block.super }}
+{% endblock title %}
+
+{% block content %}
+    <div class="main-content position-relative" id="main-content" role="main">
+        <div id="top"></div>
+        <div>
+            <section class="border-bottom" id="">
+                <div class="content medium-padding align-center">
+                    <h1 class="greenish gap-top-small">Logged out!</h1>
+                    <h6 class="rouge">Come back again.</h6>
+                    <p class="cta"><a class="arrow" href="{% url 'solarpanels' %}">Learn more about Sfair Solar products</a>
+                    </p>
+                    <div class="grid-1-at-medium grid-row-equal-heights align-center gap-top-small gap-bottom">
+                        <div class="column">
+                            <h6>You have been logged out!</h6>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="content medium-padding align-center">
+                    <p>Download the app so you don't ever have to miss a thing</p>
+                    <div class="grid-1-at-large column align-center">
+        	            <div class="app-store-section row">
+                            <div class="col-xs-6">
+                                <a class="app-store-icon iphone-store" href="https://itunes.apple.com/us/genre/ios/id36?mt=8" target="_blank"></a>
+                            </div>
+                            <div class="col-xs-6"><a class="app-store-icon android-store" href="https://play.google.com/store/apps?hl=en" target="_blank"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+{% endblock content %}

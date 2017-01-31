@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% block title %}
+    Browse | {{ block.super }}
+{% endblock title %}
+
+{% block content %}
+    <div class="main-content position-relative" id="main-con tent" role="main">
+        <div id="top"></div>
+        <div>
+            <section class="hardware border-bottom" id="hardware">
+                <div class="content medium-padding align-center">
+                    <h1>
+                        Browse Profiles{% if initial %} Starting with
+                        '{{ initial|title }}'{% endif %}
+                    </h1>
+
+                    {% for letter in 'abcdefghijklmnopqrstuvwxyz' %}
+                    <a href="{% url 'browse_by_name' initial=letter %}"
+                        {% if initial == letter %}class="active"{% endif %}>
+                        {{ letter|upper }}
+                    </a>
+                    {% endfor %}
+
+                    <div class="grid-2-at-medium grid-row-equal-heights align-center gap-top-small">
+                        <div class="grid-space-base">
+                            {% for profile in profiles %}
+                            <div class="column">
+                                <ul>
+                                    <li><a href="{% url 'profile_detail' slug=profile.slug %}">
+                                        {{ profile.name }}
+                                    </a></li>
+                                    {% empty %}
+                                    <li>Sorry, no results!</li>
+                                </ul>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+{% endblock content %}

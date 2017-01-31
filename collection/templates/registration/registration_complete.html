@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block title %}
+    Registration Complete | {{ block.super }}
+{% endblock title %}
+
+{% block content %}
+    <div class="main-content position-relative" id="main-con tent" role="main">
+        <div id="top"></div>
+        <div>
+            <section class="hardware border-bottom" id="hardware">
+                <div class="content pad-vert-medium align-center">
+                    <h3 class="headline">Registration Complete</h3>
+                    <h3 class="headline">Explore your solar world.</h3>
+                    <p>Accept credit cards at the counter or on the go with a simple, stylish, and secure solution.</p>
+                    <p class="cta"><a class="arrow" href="{% url 'contact' %}">Contact us to get a free quote</a>
+                    </p>
+                    <div class="grid-1-at-medium grid-row-equal-heights align-center gap-top-small">
+                        <div class="column">
+                            <h6>Your account has been registerd!</h6>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+{% endblock content %}
