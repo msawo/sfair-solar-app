@@ -5,5 +5,5 @@ D3.js used for "battery charging" data visualization - though the one in this re
 I'm learning D3.js and trying to figure out how I can build an algorithmn that could translate the amount of energy
 produced and consumed by the solar panels.
 
-![Alt text](https://static1.squarespace.com/static/584bdd37e58c620f9601f270/t/586e4340197aea98191bfa49/1483621185668/solar_app-devices-02.gif "Solar-app")
+![Alt text](https://raw.githubusercontent.com/msawo/sfair-solar-app/master/solar_app-devices-02.gif "Solar-app")
 
