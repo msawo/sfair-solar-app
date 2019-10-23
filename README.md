@@ -1,5 +1,7 @@
-# sfair-solar-app
-A django app that generates cash in your pocket.
+# Sfair Solar App
+# Watch [video](https://youtu.be/KfBQFM67ACA)
+
+A solar service company app, built with django that would someday generate cash in Gambians' pocket.
 This repository doesn't include the entire project, there's still a lot more work to be done.
 D3.js used for "battery charging" data visualization - though the one in this repository is just a demo, 
 I'm learning D3.js and trying to figure out how I can build an algorithmn that could translate the amount of energy
