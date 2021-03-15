@@ -1,5 +1,5 @@
 # Sfair Solar App
-## Watch [video](https://youtu.be/KfBQFM67ACA)
+
 
 A solar service company app, built with django that would someday generate cash in Gambians' pocket.
 This repository doesn't include the entire project, there's still a lot more work to be done.
